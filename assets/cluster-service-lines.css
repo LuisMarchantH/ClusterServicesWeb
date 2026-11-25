@@ -1,0 +1,33 @@
+.hero-routes.cluster-service-routes {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+.cluster-service-routes .route { min-width: 0; display: flex; flex-direction: column; }
+.cluster-service-routes .route-media { min-height: 0; height: clamp(9rem, 16vw, 14rem); }
+.cluster-service-routes .route-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cluster-service-routes .staffing-media img { object-position: center top; }
+.cluster-service-routes .route-body { flex: 1; }
+.cluster-service-routes .route-body h2 { overflow-wrap: anywhere; }
+
+.cleaning-actions { display: flex; flex-wrap: wrap; gap: .65rem; }
+.cleaning-staffing { display: inline-block; margin-top: .8rem; color: #144c6c; font-weight: 700; text-underline-offset: .25rem; }
+.cluster-staffing-cleaning { margin-block: 2rem; }
+@media (max-width: 850px) {
+  .hero-routes.cluster-service-routes { grid-template-columns: 1fr; }
+  .cluster-service-routes .route-media { height: clamp(9rem, 34vw, 16rem); }
+  .cluster-service-routes .staffing-media { height: auto; aspect-ratio: 3 / 2; }
+}
+
+.request-service { background: #edf3f7; }
+.request-service-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.request-service-actions .button { text-align: center; }
+.staff-start-card li + li { margin-top: .75rem; }
+.staff-start-card li p { margin: .15rem 0 0; }
+@media (max-width: 560px) {
+  .request-service-actions { flex-direction: column; align-items: stretch; }
+}
